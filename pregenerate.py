@@ -3,8 +3,8 @@ import os
 def pregenerate_command(input_video_file, input_video_dir, output_video_dir, output_json_dir):
     file_name = os.path.splitext(input_video_file)
 
-    input_video_path = '\"' + input_video_dir + '\\' + file_name[0] + '.mp4' + '\"'
-    output_video_path = '\"' + output_video_dir + '\\' + input_video_file + '\"'
+    input_video_path = '\"' + input_video_dir + '\\' + input_video_file + '\"'
+    output_video_path = '\"' + output_video_dir + '\\' + file_name[0] + '.avi' + '\"'
     output_json_path = '\"' + output_json_dir + '\\' + file_name[0] + '.json' + '\"'
 
     # Separate the command into parts

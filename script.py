@@ -19,6 +19,9 @@ count = 0
 for file in os.listdir(input_video_dir):
     count += 1
     print('\nPROCESSING {} OF {}'.format(count, MAX_VIDEOS))
-    os.system('cmd /c' + pregenerate_command(file, input_video_dir, output_video_dir, output_json_dir))
+    if file.endswith('.mp4') or file.endswith('.avi'):
+        os.system('cmd /c' + pregenerate_command(file, input_video_dir, output_video_dir, output_json_dir))
+    else:
+        print('Unable to process video. {}\'s file format is not supported.'.format(file))
 
 print('\nFINISHED PROCESSING VIDEOS')
