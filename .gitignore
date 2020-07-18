@@ -1,0 +1,4 @@
+/videos/*
+/openpose_output/videos/*
+/openpose_output/json/*
+!.gitkeep
